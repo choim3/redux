@@ -1,9 +1,9 @@
 import counterReducer from "./counter";
-import darkReducer from "./rating";
+// import darkReducer from "./rating";
 import cartReducer from "./cart";
 import { combineReducers } from "redux";
 const allReducers = combineReducers({
   counter: counterReducer,
-  dark: darkReducer,
+  cart: cartReducer,
 });
 export default allReducers;

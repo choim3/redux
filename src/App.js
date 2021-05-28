@@ -1,6 +1,9 @@
-import { createStore } from "redux";
-import allReducer from "./reducers/index";
 import Home from "./home";
+import Cart from "./cart";
+import allReducer from "./reducers/index";
+import { createStore } from "redux";
+import { Provider } from "react-redux";
+
 function App() {
   const store = createStore(
     allReducer,
@@ -9,7 +12,9 @@ function App() {
   );
   return (
     <div className="App">
-      <Home />
+      <Provider store={store}>
+        <Home />
+      </Provider>
     </div>
   );
 }
